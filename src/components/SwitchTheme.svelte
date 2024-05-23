@@ -8,7 +8,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<label class="swap swap-rotate fixed right-8 top-8 z-20">
+<label class="swap swap-rotate absolute right-4 top-4 z-20">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" class="theme-controller" value="winter" on:change={switchTheme} />
 

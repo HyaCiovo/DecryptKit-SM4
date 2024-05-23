@@ -16,15 +16,15 @@
   };
 </script>
 
-<h1 class="mt-4">Decrypt By SM4</h1>
+<h1 class="mt-4 text-3xl">Decrypt By SM4</h1>
 
-<div class="card lg:card-side bg-base-100 shadow-x mt-12 glass py-8">
-  <div class="flex flex-col justify-center">
+<div class="card lg:card-side bg-base-100 shadow-x my-8 glass p-4">
+  <div class="flex flex-col justify-center p-2 min-w-[40vw]">
     <div class="label">
       <span class="label-text">Need to be decrypted</span>
     </div>
     <textarea
-      class="textarea textarea-bordered h-48 w-[500px] resize-none"
+      class="textarea textarea-bordered h-48 w-full resize-none"
       placeholder="Need to be decrypted"
       bind:value={raw}
     />
@@ -34,7 +34,7 @@
     </div>
     <input
       placeholder="KEY"
-      class="input input-bordered w-[500px]"
+      class="input input-bordered w-full"
       bind:value={KEY}
     />
 
@@ -42,12 +42,12 @@
       >Decrypt🤔</button
     >
   </div>
-  <div class="card-body">
+  <div class="card-body p-2">
     <div class="label">
       <span class="label-text">Output</span>
     </div>
     <textarea
-      class={`textarea textarea-bordered h-48 w-full 
+      class={`textarea textarea-bordered h-48 w-full
       ${result ? "cursor-auto" : "cursor-default"} resize-none mb-8`}
       placeholder="result"
       disabled
