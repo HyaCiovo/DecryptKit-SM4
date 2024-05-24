@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { status } from "../../store/index.ts";
   import { decryptBySM4, copyText } from "./../../utils/crypto.ts";
   import toast from "svelte-french-toast";
   let raw: string,
@@ -12,14 +13,13 @@
       console.log(JSON.parse(result));
     } catch (e) {
       toast.error(`😣${e.message}`);
+      status.set(false)
     }
   };
 </script>
 
-<h1 class="mt-4 text-3xl">Decrypt By SM4</h1>
-
-<div class="card lg:card-side bg-base-100 shadow-x my-8 glass p-4">
-  <div class="flex flex-col justify-center p-2 min-w-[40vw]">
+<div class="card lg:card-side bg-base-100 shadow-x mt-4 glass p-2">
+  <div class="flex flex-col justify-center px-2 pt-0 pb-4 min-w-[40vw]">
     <div class="label">
       <span class="label-text">Need to be decrypted</span>
     </div>
@@ -63,3 +63,4 @@
     {/if}
   </div>
 </div>
+

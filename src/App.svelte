@@ -2,16 +2,17 @@
   import Router from "svelte-spa-router";
   import { Toaster } from "svelte-french-toast";
   import { routes } from "./router.ts";
-  import SwitchTheme from "./components/SwitchTheme.svelte";
-
+  import Header from "./layouts/header.svelte";
+  import Bottom from "./layouts/bottom.svelte";
 </script>
 
 <main data-theme="winter">
-  <SwitchTheme />
+  <Header />
   <Toaster />
   <div class="card text-center">
     <Router {routes} />
   </div>
+  <Bottom />
 </main>
 
 <style>

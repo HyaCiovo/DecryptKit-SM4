@@ -1,5 +1,5 @@
 {
-  "name": "sveltevite-demo",
+  "name": "decryptkit-sm4",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "@types/node": "^20.2.5",
-    "axios": "^1.4.0",
     "gm-crypto": "^0.1.12",
     "less": "^4.1.3",
     "svelte-french-toast": "^1.2.0",

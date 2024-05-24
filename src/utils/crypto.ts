@@ -1,5 +1,6 @@
 import { SM4 } from "gm-crypto";
 import toast from "svelte-french-toast";
+import { status } from "../store/index";
 
 /** 解密 */
 export const decryptBySM4 = (
@@ -33,6 +34,7 @@ const encryptBySM4 = (originalData: any, KEY: string) => {
 export const copyText = (text: string) => {
   if (!text) {
     toast.error("No content👻");
+    status.set(false);
     return;
   }
   try {
@@ -45,7 +47,9 @@ export const copyText = (text: string) => {
 
     // navigator.clipboard.writeText(text);
     toast.success("Copy successful🫡");
+    status.set(true);
   } catch {
     toast.error("Copy failure😣");
+    status.set(false);
   }
 };
